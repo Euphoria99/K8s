@@ -2,13 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: first-app-deployment
-  labels:
-    group: example
+  # labels:
+  #   group: example
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      app: first-app
+    # matchLabels:
+    #   app: first-app
+    matchExpressions:
+      - { key: app, operator: In, values: [second-app, first-app] }
   template:
     metadata:
       labels:
