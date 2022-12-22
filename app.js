@@ -6,6 +6,7 @@ app.get("/", (req, res) => {
   res.send(`
     <h1>Hello from this NodeJS app!!!</h1>
     <p>This is new line from new image</p>
+    <p>Image Pull policy is working great</p>
     <p>Try sending a request to /error and see what happens</p>
   `);
 });

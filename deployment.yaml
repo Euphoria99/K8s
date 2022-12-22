@@ -19,6 +19,7 @@ spec:
       containers:
         - name: first-app
           image: pavanbhat99/kub-first-app:2
+          imagePullPolicy: Always
           livenessProbe:
             httpGet:
               path: /
