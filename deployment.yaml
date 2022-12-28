@@ -14,4 +14,10 @@ spec:
     spec:
       containers:
         - name: story
-          image: pavanbhat99/kub-story
+          image: pavanbhat99/kub-story:1
+          volumeMounts:
+            - mountPath: /app/story
+              name: story-volume
+      volumes:
+        - name: story-volume
+          emptyDir: {}
