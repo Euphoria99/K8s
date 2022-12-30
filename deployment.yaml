@@ -21,7 +21,11 @@ spec:
               name: story-volume
           env:
             - name: STORY_FOLDER
-              value: "story"
+              # value: "story"
+              valueFrom:
+                configMapKeyRef:
+                  name: data-store-env
+                  key: folder
       volumes:
         - name: story-volume
           persistentVolumeClaim:
