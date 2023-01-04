@@ -18,8 +18,8 @@ spec:
           imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
-              value: localhost
-        - name: auth
-          image: pavanbhat99/kub-demo-auth:latest
-          imagePullPolicy: Always
-          #how we mention multiple containers in same pod
+              value: "10.100.250.195"
+        # - name: auth
+        #   image: pavanbhat99/kub-demo-auth:latest
+        #   imagePullPolicy: Always
+        #how we mention multiple containers in same pod
