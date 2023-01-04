@@ -18,7 +18,8 @@ spec:
           imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
-              value: "10.100.250.195"
+              # value: "10.100.250.195"
+              value: "auth-service.default"
         # - name: auth
         #   image: pavanbhat99/kub-demo-auth:latest
         #   imagePullPolicy: Always
