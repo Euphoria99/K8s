@@ -11,7 +11,7 @@ function App() {
   const fetchTasks = useCallback(async function () {
     try {
       const headerValue = 'Authorization';
-      const response = await axios.get('http://172.22.220.139:31012/tasks', {
+      const response = await axios.get('/api/tasks', {
         headers: {
           [headerValue]: 'Bearer abc',
         },
@@ -30,7 +30,7 @@ function App() {
     try {
       const headerValue = 'Authorization';
       const response = await axios.post(
-        'http://172.22.220.139:31012/tasks',
+        '/api/tasks',
         { ...task },
         {
           headers: {
