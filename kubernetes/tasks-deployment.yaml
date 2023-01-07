@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: tasks
-          image: pavanbhat99/kub-demo-tasks
+          image: pavanbhat99/kub-demo-tasks:latest
           imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
-              value: "auth-service.default"
+              value: 'auth-service.default'
             - name: TASKS_FOLDER
               value: tasks
